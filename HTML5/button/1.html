@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单选 && 多选 按钮</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" /><!--禁止Android中自动识别页面中的邮件地址-->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            outline:none; /*（轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。轮廓线不会占据空间，也不一定是矩形*/
+            border:none;
+            box-sizing:border-box; /**为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+                通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。**/
+        }
+        ol,ul,li,dl{
+            list-style:none;
+        }
+        body{
+            -webkit-tap-highlight-color: rgba(0,0,0,0); /*去掉默认链接底色*/
+        }
+        body,input,select,button,textarea,section{
+            font:12px/18px "Pingfang SC","Heiti SC","DroidSansFallback","微软雅黑","Microsoft JhengHei","WenQuanYi Micro Hei","Helvetica Neue",Verdana,Arial,Helvetica,sans-serif;
+        }
+        html{
+            overflow-x:hidden; /*裁剪内容 - 不提供滚动机制。*/
+            overflow-y:auto; /*如果溢出框，则应该提供滚动机制。*/
+        }
+        :root{ /*:root 选择器匹配文档根元素，在html中，根元素始终都为 html*/
+            background: #fff;
+        }
+        label,select,input{
+            vertical-align:middle;
+            width:100%;
+        }
+        input,label{
+            position:relative;
+            float:right;
+            right: 0px;
+        }
+        input{
+            width:0px;
+            top:20px;
+        }
+        label{
+            text-align:right;
+            height: 56px;
+            z-index:2;
+        }
+        input[type=riado],
+        input[typeof=checkbox]{
+            position:absolute;
+            opacity:0;
+        }
+        input[type=radio]+label:before,
+        input[type=checkbox]+label:before{
+            content:"";
+            display:inline-block;
+            width:18px;
+            height:18px;
+            border:1px solid #cccccc;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            float:right;
+            background-color:#fff;
+            top:18px;
+            position:relative;
+        }
+        input[type=radio]:checked+label:before,
+        input[type=checkbox]:checked+label:before{
+            width:18px;
+            height:18px;
+            float:right;
+            border:1px solid #f95e6c;
+            background: #f95e6c url(../images/dui1.svg) 100% 0 no-repeat;
+            background-size: 100%;
+            content:"";
+        }
+        label em{
+            position:relative;
+            right:10px;
+            float:right;
+            width:auto;
+            height: 56px;
+            line-height: 56px;
+            top:0;
+        }
+        ul.new_vip_content{
+            margin-top: 35px;
+        }
+        ul.new_vip_content li{
+            width: 100%;
+            height: 56px;
+            line-height: 56px;
+            border-bottom:1px solid #ccc;
+            float:left;
+        }
+        .new_vip_content li p{
+            float:left;
+            width:100%;
+            padding:0 10px 0 0 ;
+        }
+        .new_vip_content li p{
+            position:relative;
+            top: -56px;
+            width:100%;
+            z-index:1;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div style="margin-top:100px;width:100%;padding:0 30px; float:left">
+            <ul class="new_vip_content">
+                <li>
+                    <input type="radio" name="sextype" value="0" style="" id="sex0">
+                    <label for="sex0"><em>单选radio</em></label>
+                    <p>主标题</p>
+                </li>
+                <li>
+                    <input type="radio" name="sextype" value="0" style="" id="sex1">
+                    <label for="sex1"><em>单选radio</em></label>
+                    <p>主标题</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="sexstyle" value="0" style="" id="sex2">
+                    <label for="sex2"><em>复选框checkbox</em></label>
+                    <p>主标题</p>
+                </li>
+                <li>
+                    <input type="checkbox" name="sexstyle" value="0" style="" id="sex3">
+                    <label for="sex3"><em>复选框checkbox</em></label>
+                    <p>主标题</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

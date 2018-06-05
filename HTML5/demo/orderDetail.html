@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, address=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>Title</title>
+    <style>
+        body,h2,h3,dl,dt,dd{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:#f0f0f0;
+            margin:0 auto;
+        }
+        .header{
+            background:#ffffff;
+            width:100%;
+            height:1.28rem;
+            position:relative;
+        }
+        .header span{
+            font-size:.51rem;
+            position:absolute;
+            top:20%;
+            left:37%;
+        }
+        .header img{
+            width:.46rem;
+            height:.66rem;
+            position:absolute;
+            top:25%;
+            left:5%;
+        }
+
+        .module_son{
+            width:100%;
+            height:30%;
+            background:#ffffff;
+            margin-top:.28rem;
+        }
+        .module_son h3{
+            font-size:.45rem;
+            font-family: "微软雅黑",'Microsoft YaHei';
+            font-weight: normal;
+            font-weight:600;
+            border-bottom:1px solid #e5e5e5;
+            width:81%;
+            margin-left:.7rem;
+            padding-top:.54rem;
+            padding-bottom:.47rem;
+        }
+        dl{
+            margin-top:.61rem;
+            margin-left:.7rem;
+            margin-bottom:.85rem;
+        }
+        dt{
+            font-size:.4rem;
+            color:#999999;
+            padding-top:.2rem;
+        }
+        dt span{
+            display:inline-block;
+            float:right;
+            padding-right:.7rem;
+        }
+        .attention{
+            margin-left:.5rem;
+            margin-right:.5rem;
+        }
+        .attention img{
+            float:left;
+            padding-right:.3rem;
+        }
+        .attention p{
+            font-size:.2rem;
+            color:#999999;
+        }
+        .button img{
+            position: fixed;
+            top:92%;
+            width:100%;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    /* 调节rem根值大小 */
+    var resizeREM = (function () {
+        var body_h = document.body.clientHeight;
+        var body_w = document.body.clientWidth;
+        document.querySelector("html").style["font-size"] = ((body_w / 1080) < 1 ? (body_w / 1080) * 100 : 100) + "px";
+    });
+    window.addEventListener('DOMContentLoaded', function () {
+        resizeREM();
+    });
+    window.onresize = function () {
+        resizeREM();
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/back.png"/>
+            <span>订单明细</span>
+        </div>
+        <div class="module_fa">
+            <div class="module_son module_one">
+                <h3>参保信息</h3>
+                <dl>
+                    <dt>参保城市<span>北京</span></dt>
+                    <dt>户籍性质<span>城镇户口</span></dt>
+                    <dt>开始月份<span>2016年12月</span></dt>
+                    <dt>持续时间<span>一个月</span></dt>
+                    <dt>结束月份<span>2017年1月</span></dt>
+                    <dt>本城市首次缴纳<span>否</span></dt>
+                    <dt>银行卡号<span>6214 0001  4000 4422</span></dt>
+                    <dt>一寸免冠白底彩照<span>已上传</span></dt>
+                </dl>
+            </div>
+            <div class="module_son module_two">
+                <h3>参保人信息</h3>
+                <dl>
+                    <dt>姓名<span>张三</span></dt>
+                    <dt>身份证号<span>13220091111111111</span></dt>
+                    <dt>手机号<span>19877777777</span></dt>
+                </dl>
+            </div>
+            <div class="module_son module_two">
+                <h3>支付信息</h3>
+                <dl>
+                    <dt>支付金额<span>￥99.00</span></dt>
+                    <dt>支付时间<span>2016年4月12日 14:34</span></dt>
+                    <dt>支付方式<span>微信</span></dt>
+                    <dt>订单号<span>201933383839449</span></dt>
+                    <dt>订单状态<span>已支付</span></dt>
+                </dl>
+            </div>
+        </div>
+        <div class="attention"><img src="img/att.png"/><p>推荐人奖金只有推荐人自己可见，缴纳成功后，可获得100元奖金</p>
+        </div>
+        <div class="button"><img  src="img/btn.png"/></div>
+    </div>
+</body>
+</html>

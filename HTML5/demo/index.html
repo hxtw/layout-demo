@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, address=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>缴社保</title>
+    <style>
+        /*152统一处理的css代码。 这里可以统一调用背景图和清除浮动（指通用性较高的布局、模块、原件内的清楚），实际上，雅虎工程师提供的css初始化代码中就有清除浮动的css代码。这一部分代码放在重置和默认的css代码下面。
+布局（grid）: 我们将页面分割为几个大块，通常有头部、主体、主栏、侧栏、尾部等。常用！
+模块（module）：即语义化的可以重复使用的较大的整体。如导航、登陆、注册、列表、评论、搜索等。常用！
+元件（unit）：通常是一个不可再分的较为小巧的个体，被重复用于各种模块中，比如按钮、输入框、loading、图表等。常用！
+功能（function）：为方便一些常用样式的使用，我们将这些使用率较高的样式剥离出来，按需使用，通常这些选择器具有固定样式表现，比如清除浮动。不常用，不可滥用！
+皮肤（skin）：对于换肤型网站需要使用，将皮肤型的样式抽离出来，非换肤型网站不可滥用，不常用。
+状态:即一些状态类样式。不常用。*/
+        body,h1,h2,h3,h4,h5,dl,dt,div{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:#f0f0f0;
+            margin:0 auto;
+        }
+        .header{
+            background:#ffffff;
+            height:1.28rem;
+            position:relative;
+        }
+        .header img{
+            width:.46rem;
+            height:.66rem;
+            position:absolute;
+            top:25%;
+            left:5%;
+        }
+        .header span{
+            font-size:.54rem;
+            position:absolute;
+            top:25%;
+            left:40%;
+        }
+        .banner img{
+            width:100%;
+        }
+        .m-form{
+            padding-bottom:3rem;
+        }
+        .unit dl dt{
+            background:#ffffff;
+            height:1.52rem;
+            border-bottom:1px solid #e5e5e5;
+            font-size:.49rem;
+            padding-top:.8rem;
+            padding-left:.45rem;
+            position:relative;
+        }
+        .unit dl dt img{
+            width:.3rem;
+            height:.45rem;
+            position:absolute;
+            top:40%;
+            left:93%;
+            /*float:right;*/
+            /*padding-top:.4rem;*/
+            /*padding-right:.46rem;*/
+
+        }
+        .unit dt span{
+            float:right;
+            padding-right:1rem
+        }
+        .u-radio{
+            background:#ffffe8;
+            height:1.5rem;
+            overflow: hidden;
+        }
+        .u-radio p{
+            font-size:.35rem;
+            color:#999999;
+            padding-left:.45rem;
+            padding-right:.45rem;
+        }
+        .explain{
+            padding-top:1.2rem;
+            position:relative;
+            padding-left:.4rem;
+        }
+        .advantage{
+            padding-top:1rem;
+            position:relative;
+            padding-left:.4rem;
+        }
+        .explain h4, .advantage h4{
+            font-weight: normal;
+            font-size:.46rem;
+            padding-top:0;
+            padding-left:.6rem;
+        }
+        .explain img, .advantage img{
+            /*float:left;*/
+            width:.43rem;
+            height:.43rem;
+            position:absolute;
+            top:34.5%;
+        }
+        .explain p, .advantage p{
+            font-size:.4rem;
+            padding-left:.59rem;
+            padding-right:1.2rem;
+            color:#999999;
+        }
+        .footer .left{
+            position:fixed;
+            top:92%;
+            width:30%;
+            z-index:999;
+        }
+        .footer .right{
+            width:70%;
+            position:fixed;
+            top:92%;
+            left:30%;
+            z-index:999;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    /* 调节rem根值大小 */
+    var resizeREM = (function () {
+        var body_h = document.body.clientHeight;
+        var body_w = document.body.clientWidth;
+        document.querySelector("html").style["font-size"] = ((body_w / 1080) < 1 ? (body_w / 1080) * 100 : 100) + "px";
+    });
+    window.addEventListener('DOMContentLoaded', function () {
+        resizeREM();
+    });
+    window.onresize = function () {
+        resizeREM();
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/back.png"/>
+            <span>缴社保</span>
+        </div>
+        <div class="m-form">
+            <div class="banner">
+                <img src="img/bannert.png"/>
+            </div>
+            <div class="unit">
+                <dl>
+                    <dt>参保城市<span>北京</span><img src="img/arrow.png"></dt>
+                    <dt>户籍城市<span>城镇</span><img src="img/arrow.png"></dt>
+                    <dt>本城市首次缴纳<span>是</span><img src="img/arrow.png"></dt>
+                </dl>
+            </div>
+            <div class="u-radio"><p>可缴纳2016年12月及之后的月份，截止时间为12月20日。可缴纳2016年12月及之后的月份，截止时间为12月20日。</p></div>
+            <div class="m-attention">
+                <div class="explain">
+                    <img src="img/atten.png">
+                    <h4>重要说明：</h4>
+                    <p>以前曾在单位参保，第一次下单购买前请确认前单位已经减员。由于前单位没有减员导致购买不成功，平台不负责。</p>
+                </div>
+                <div class="advantage">
+                    <img src="img/atten.png">
+                    <h4>我们的优势：</h4>
+                    <p>1、覆盖城市最广，每个城市专职客服服务<br/>
+                        2、专注社保行业12年，7000家企业客户的选择</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img class="left" src="img/btn_left.png"/>
+            <img class="right" src="img/btn_right.png"/>
+        </div>
+    </div>
+</body>
+</html>
